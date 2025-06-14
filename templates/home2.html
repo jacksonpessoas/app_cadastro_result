@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/reset.css">
+  <link rel="stylesheet" href="../static/css/home.css">
+  <link rel="shortcut icon" href="../static/img/logoP.JPG" type="image/x-icon">
+  <title>INSTITUTO RESULT</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="box">
+
+      <h1 class="title">INSTITUTO RESULT</h1>
+      <h3 class="title2">"Pesquisa Eleições 2026 - PE"</h3><br>
+
+
+      <div class="button-grid">
+
+        <a href="cadastro.html">
+          <button type="button">Cadastro </button> <br>
+
+
+
+          <a href="index.html">
+            <button type="button">Login</button>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const usuario = localStorage.getItem('usuarioLogin');
+
+      if (!usuario || usuario === 'admin') {
+        // Se não estiver logado ou for admin, redireciona
+        window.location.href = '../index.html';
+      }
+    });
+  </script>
+
+  <!-- <footer>
+        <p>&copy; 2025 Desenvolvido por @jacksonpessoas. Todos os direitos reservados.</p>
+    </footer> -->
+
+</body>
+
+</html>

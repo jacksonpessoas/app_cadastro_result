@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/sytle.css">
+    <link rel="shortcut icon" href="../static/img/logoP.JPG" type="image/x-icon">
+    <title>Instituto Result</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+
+        <form class="form" method="post" id="formPesquisa">
+            <label>Nome:</label>
+            <input type="text" name="nome"><br><br>
+
+            <label>Idade:</label>
+            <input type="number" name="idade"><br><br>
+
+            <label>Sexo:</label>
+            <select name="sexo" required>
+                <option value="" disabled selected>Selecione o sexo</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select><br><br>
+
+            <label for="bairro">Bairro:</label>
+            <select id="bairro" name="bairro" required>
+                <option value="" disabled selected>Selecione um bairro</option>
+                <option value="Alto da Paz">Alto da Paz</option>
+                <option value="Arthur Lundgren I">Arthur Lundgren I</option>
+                <option value="Arthur Lundgren II">Arthur Lundgren II</option>
+                <option value="Catolé">Catolé</option>
+                <option value="Chã da Mangabeira">Chã da Mangabeira</option>
+                <option value="Engenho Maranguape">Engenho Maranguape</option>
+                <option value="Enseadinha">Enseadinha</option>
+                <option value="Fragoso">Fragoso</option>
+                <option value="Jaguarana">Jaguarana</option>
+                <option value="Jaguarana">Jaguaribe</option>
+                <option value="Janga">Janga</option>
+                <option value="Jardim Maranguape">Jardim Maranguape</option>
+                <option value="Jardim Paulista">Jardim Paulista</option>
+                <option value="Jardim Paulista Alto">Jardim Paulista Alto</option>
+                <option value="Jaguaribe">Jaguaribe</option>
+                <option value="Maranguape I">Maranguape I</option>
+                <option value="Maranguape II">Maranguape II</option>
+                <option value="Marinha Farinha">Maria Farinha</option>
+                <option value="Mirueira">Mirueira</option>
+                <option value="Nobre">Nobre</option>
+                <option value="Nossa Senhora da Conceicao">Nossa Senhora da Conceição</option>
+                <option value="Nossa Senhora do O">Nossa Senhora do Ó</option>
+                <option value="Pau Amarelo">Pau Amarelo</option>
+                <option value="Paratibe">Paratibe</option>
+                <option value="Paulista Centro">Paulista Centro</option>
+                <option value="Parque Janga">Parque do Janga</option>
+                <option value="Poty">Poty</option>
+                <option value="Tabajara">Tabajara</option>
+                <option value="Torres Galvao">Vila Torres Galvão</option>
+                <option value="Uruba">Uruba</option>
+                <option value="Vale da Paz">Vale da Paz</option>
+            </select>
+
+
+
+            <label>Escolaridade:</label>
+            <select name="escolaridade" required>
+                <option value="" disabled selected>Grau de Instrução</option>
+                <option value="fundamental_incompleto">Ensino Fundamental Incompleto</option>
+                <option value="fundamental_completo">Ensino Fundamental Completo</option>
+                <option value="medio_incompleto">Ensino Médio Incompleto</option>
+                <option value="medio_completo">Ensino Médio Completo</option>
+                <option value="tecnico_incompleto">Ensino Técnico Incompleto</option>
+                <option value="tecnico_completo">Ensino Técnico Completo</option>
+                <option value="superior_incompleto">Ensino Superior Incompleto</option>
+                <option value="superior_completo">Ensino Superior Completo</option>
+                <option value="pos_graduacao">Pós-Graduação</option>
+                <option value="mestrado">Mestrado</option>
+                <option value="doutorado">Doutorado</option>
+                <option value="nao_escolarizado">Não Escolarizado</option>
+            </select><br><br>
+
+            <label>Está Trabalhando?</label><br>
+            <input type="radio" name="trabalho" value="sim"> Sim<br>
+            <input type="radio" name="trabalho" value="nao"> Não<br><br>
+
+            <label for="renda">Renda Familiar</label>
+            <input type="text" name="renda" id="renda" placeholder="R$0,00"><br><br>
+
+            <label for="atualGov">Você está aprovando o trabalho da Governadora?</label>
+            <select name="atualGov" id="atualGov">
+                <option value="" disabled selected></option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+                <option value="indiferente">Indiferente</option>
+            </select>
+
+
+            <label for="candidato">Se a eleição fosse hoje, você votaria em quem para Governador(a)</label>
+            <select name="candidato" id="candidato">
+                <option value="" disabled selected></option>
+                <option value="raquel">Raquel Lira</option>
+                <option value="joao">João Campos</option>
+                <option value="gilson">Gilson Machado</option>
+                <option value="anderson">Anderson Ferreira</option>
+                <option value="indecisos">Indecisos</option>
+                <option value="branco">Branco</option>
+                <option value="nulo">Nulo</option>
+                <option value="naovotar">Não vai votar</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+                        
+            <a href="../templates/index.html">
+            <button type="button">Login</button>
+
+
+        </form>
+    </div>
+
+    <div class="bg-overlay"></div>
+
+
+    <script src="src/js/script.js"></script>
+
+</body>
+
+</html>
