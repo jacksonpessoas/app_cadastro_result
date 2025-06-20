@@ -1,8 +1,19 @@
-import sqlite3
-import os
+import psycopg2
+from psycopg2.extras import RealDictCursor
+
+# Configurações de conexão com o PostgreSQL
+DB_CONFIG = {
+    "host": "localhost",
+    "port": 5432,
+    "dbname": "app_cadastro_result",
+    "user": "postgres",
+    "password": "6599145"
+}
 
 def get_db_connection():
-    db_path = os.path.join(os.path.dirname(__file__), 'database', 'cadastro.db')
-    conn = sqlite3.connect(db_path)
-    conn.row_factory = sqlite3.Row
-    return conn
+    try:
+        conn = psycopg2.connect(**DB_CONFIG, cursor_factory=RealDictCursor)
+        return conn
+    except Exception as e:
+        print("Erro ao conectar com o banco de dados:", e)
+        return None

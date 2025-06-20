@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/reset.css">
-    <link rel="stylesheet" href="../static/css/sytle.css">
-    <link rel="shortcut icon" href="../static/img/logoP.JPG" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logoP.JPG') }}" type="image/x-icon">
     <title>Instituto Result</title>
 </head>
 
@@ -114,9 +114,11 @@
             </select>
 
             <button type="submit">Enviar</button>
-                        
-            <a href="../templates/index.html">
-            <button type="button">Login</button>
+
+            <a href="{{ url_for('routes.home') }}">
+                <button type="button">Login</button>
+
+                <button type="reset">Limpar</button>
 
 
         </form>
@@ -124,8 +126,8 @@
 
     <div class="bg-overlay"></div>
 
-
-    <script src="src/js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
 
 </body>
 
