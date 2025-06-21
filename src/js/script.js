@@ -70,7 +70,7 @@ document.getElementById("formPesquisa").addEventListener("submit", function(e) {
         candidato: document.querySelector("[name='candidato']").value
     };
 
-    fetch("http://localhost:5000/pesquisa", {
+    fetch("https://app-cadastro-result.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
